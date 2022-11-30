@@ -214,6 +214,21 @@ struct PopularRestaurantsView: View {
     }
 }
 
+//MARK: - TrendingCategoriesModel
+struct TrendingCategoriesModel: Identifiable {
+    var id = UUID().uuidString
+    var name: String
+    var imageName: String
+    
+    
+    static let allTrendingUsers: [TrendingCategoriesModel] = [
+        .init(name: "Chat Bot", imageName: "ChatBot"),
+        .init(name: "Chat Bot", imageName: "Paris"),
+        .init(name: "Chat Bot", imageName: "Place"),
+        .init(name: "Chat Bot", imageName: "City"),
+    ]
+}
+
 //MARK: - Trending Categories View
 struct TrendingCategoriesView: View {
     var body: some View {
@@ -229,13 +244,22 @@ struct TrendingCategoriesView: View {
             .padding(.top)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(0..<10, id: \.self) { num in
-                        Circle()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.gray)
-                            .shadow(color: .gray, radius: 4, x: 0, y: 2)
-                            .padding(.bottom)
+                HStack(alignment: .top, spacing: 12) {
+                    ForEach(TrendingCategoriesModel.allTrendingUsers) { user in
+                        VStack {
+                            Image(user.imageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 60, height: 60)
+                                .cornerRadius(60)
+                            
+                            Text(user.name)
+                                .font(.system(size: 12, weight: .semibold))
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(width: 65)
+                        .shadow(radius: 4)
+                        .padding(.bottom)
                     }
                 }
                 .padding(.horizontal)
