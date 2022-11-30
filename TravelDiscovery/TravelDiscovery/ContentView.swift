@@ -9,18 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                DiscoverCategoriesView()
+            }
+            .navigationTitle("Discover")
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+//MARK: - Discover Categories View
+struct DiscoverCategoriesView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(0..<5, id: \.self) { index in
+                    VStack(spacing: 4) {
+                        Circle()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.gray)
+                        
+                        Text("Art")
+                            .font(.system(size: 12, weight: .semibold, design: .rounded))
+                    }
+                }
+            }
+            .padding(.horizontal)
+        }
     }
 }
