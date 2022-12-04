@@ -22,7 +22,7 @@ struct PopularDestinationsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
-                    ForEach(PoplularDestinationsModel.allDestinations) { destination in
+                    ForEach(Destination.allDestinations) { destination in
                         VStack(alignment: .leading) {
                             Image(destination.imageName)
                                 .resizable()

@@ -22,7 +22,7 @@ struct TrendingCategoriesView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 12) {
-                    ForEach(TrendingCategoryModel.allTrendingUsers) { user in
+                    ForEach(User.allTrendingUsers) { user in
                         VStack {
                             Image(user.imageName)
                                 .resizable()

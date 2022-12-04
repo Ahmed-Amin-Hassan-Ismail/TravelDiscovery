@@ -11,7 +11,7 @@ struct DiscoverCategoriesView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack( alignment: .top, spacing: 14) {
-                ForEach(DiscoverCategoryModel.allCategories) { category in
+                ForEach(Category.allCategories) { category in
                     VStack(spacing: 4) {
                         Image(systemName: category.imageName)
                             .font(.system(size: 22))

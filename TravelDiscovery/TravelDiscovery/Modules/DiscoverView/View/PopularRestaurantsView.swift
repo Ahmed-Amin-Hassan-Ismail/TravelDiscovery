@@ -22,7 +22,7 @@ struct PopularRestaurantsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
-                    ForEach(PopularRestaurantsModel.allRestaurants) { restaurant in
+                    ForEach(Restaurant.allRestaurants) { restaurant in
                         HStack(spacing: 8) {
                             Image(restaurant.imageName)
                                 .resizable()
