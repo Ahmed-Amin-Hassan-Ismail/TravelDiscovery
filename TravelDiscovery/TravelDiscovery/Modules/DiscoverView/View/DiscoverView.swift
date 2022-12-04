@@ -26,7 +26,7 @@ struct DiscoverView: View {
                 .edgesIgnoringSafeArea(.all)
                 
                 
-                Color(white: 0.95)
+                Color.discoverBackground
                     .offset(y: 400)
                 
                 ScrollView {
@@ -56,7 +56,7 @@ struct DiscoverView: View {
                         
                         TrendingCategoriesView()
                     }
-                    .background(Color(white: 0.95))
+                    .background(Color.discoverBackground)
                     .cornerRadius(15)
                 }
                 .navigationTitle("Discover")

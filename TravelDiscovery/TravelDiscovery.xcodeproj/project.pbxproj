@@ -16,6 +16,9 @@
 		AC477B6D293CEB2A0070367C /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B6C293CEB2A0070367C /* Destination.swift */; };
 		AC477B6F293CEB3A0070367C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B6E293CEB3A0070367C /* Restaurant.swift */; };
 		AC477B71293CEB4D0070367C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B70293CEB4D0070367C /* User.swift */; };
+		AC477B74293CEE790070367C /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B73293CEE790070367C /* TileModifier.swift */; };
+		AC477B77293CEF7F0070367C /* View+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B76293CEF7F0070367C /* View+EXT.swift */; };
+		AC477B7A293CEFF90070367C /* Color+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC477B79293CEFF90070367C /* Color+EXT.swift */; };
 		AC5979082937A50500A8F65B /* TravelDiscoveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5979072937A50500A8F65B /* TravelDiscoveryApp.swift */; };
 		AC59790C2937A50600A8F65B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC59790B2937A50600A8F65B /* Assets.xcassets */; };
 		AC59790F2937A50600A8F65B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC59790E2937A50600A8F65B /* Preview Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		AC477B6C293CEB2A0070367C /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		AC477B6E293CEB3A0070367C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AC477B70293CEB4D0070367C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC477B73293CEE790070367C /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
+		AC477B76293CEF7F0070367C /* View+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+EXT.swift"; sourceTree = "<group>"; };
+		AC477B79293CEFF90070367C /* Color+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+EXT.swift"; sourceTree = "<group>"; };
 		AC5979042937A50500A8F65B /* TravelDiscovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelDiscovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5979072937A50500A8F65B /* TravelDiscoveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDiscoveryApp.swift; sourceTree = "<group>"; };
 		AC59790B2937A50600A8F65B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +102,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AC477B72293CEE5F0070367C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC477B78293CEFB70070367C /* TileViewModifier */,
+				AC477B75293CEF750070367C /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AC477B75293CEF750070367C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC477B76293CEF7F0070367C /* View+EXT.swift */,
+				AC477B79293CEFF90070367C /* Color+EXT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC477B78293CEFB70070367C /* TileViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				AC477B73293CEE790070367C /* TileModifier.swift */,
+			);
+			path = TileViewModifier;
+			sourceTree = "<group>";
+		};
 		AC5978FB2937A50500A8F65B = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +147,7 @@
 		AC5979062937A50500A8F65B /* TravelDiscovery */ = {
 			isa = PBXGroup;
 			children = (
+				AC477B72293CEE5F0070367C /* Utils */,
 				AC5979072937A50500A8F65B /* TravelDiscoveryApp.swift */,
 				AC477B5B293CEA0F0070367C /* Modules */,
 				AC59790B2937A50600A8F65B /* Assets.xcassets */,
@@ -202,12 +235,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC477B71293CEB4D0070367C /* User.swift in Sources */,
+				AC477B74293CEE790070367C /* TileModifier.swift in Sources */,
+				AC477B7A293CEFF90070367C /* Color+EXT.swift in Sources */,
 				AC477B67293CEAB70070367C /* PopularRestaurantsView.swift in Sources */,
 				AC5979082937A50500A8F65B /* TravelDiscoveryApp.swift in Sources */,
 				AC477B6D293CEB2A0070367C /* Destination.swift in Sources */,
 				AC477B61293CEA3A0070367C /* DiscoverView.swift in Sources */,
 				AC477B6B293CEB170070367C /* Category.swift in Sources */,
 				AC477B65293CEA910070367C /* PopularDestinationsView.swift in Sources */,
+				AC477B77293CEF7F0070367C /* View+EXT.swift in Sources */,
 				AC477B69293CEACE0070367C /* TrendingCategoriesView.swift in Sources */,
 				AC477B6F293CEB3A0070367C /* Restaurant.swift in Sources */,
 				AC477B63293CEA700070367C /* DiscoverCategoriesView.swift in Sources */,

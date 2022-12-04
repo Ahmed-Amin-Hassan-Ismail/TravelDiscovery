@@ -43,9 +43,7 @@ struct PopularDestinationsView: View {
                                 .padding(.horizontal, 8)
                                 .padding(.bottom, 8)
                         }
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .shadow(color: Color(white: 0.9) ,radius: 4)
+                        .asTile()
                         .padding(.bottom)
                     }
                 }
